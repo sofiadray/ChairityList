@@ -1,7 +1,15 @@
 source 'https://rubygems.org'
 
+# Gets user location
 gem "geocoder"
+# Embeds map
 gem "gmaps4rails"
+
+gem 'devise'
+
+gem 'carrierwave'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
