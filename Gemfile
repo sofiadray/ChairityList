@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'pg'
 gem "geocoder"
+gem 'simple_form'
 gem "gmaps4rails"
 gem 'devise'
 gem 'carrierwave'
