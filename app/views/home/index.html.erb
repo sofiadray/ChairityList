@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Welcome to Chairity List</h1>
+<div class="row">
+  <div class="col-md-4">
+    <% @category.each do |category| %>
+      <%= content_tag(:div, content_tag(:p, category.name), class: 'btn btn-primary') %>
+    <% end %>
+  </div>
+</div>
+
+</div>
