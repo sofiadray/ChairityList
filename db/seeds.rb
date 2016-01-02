@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-city = City.create(name: "New York City", state: "New York", county: "United States", continent: "North America")
+city = City.create(name: "New York City", state: "New York", country: "United States", continent: "North America")
 
 # category = Category.create([
 #   { name: 'Advocacy & Human Rights' },

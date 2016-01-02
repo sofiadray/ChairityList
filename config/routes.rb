@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get "/cities" => 'city#index'
 
-  resources :cities 
+  resources :cities
 
   resources :charities do
   	resources :posts
