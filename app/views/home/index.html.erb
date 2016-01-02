@@ -1,20 +1,40 @@
 <center>
-<div class="container">
-  <h1>chairityList</h1>
-  <h3> <a href="/cities"> Explore Chairities around you </a> <br> or <br> Login </h3>
-<div class="row">
-<center>
-  <div class="col-md-4">
+  <div class="container">
+    <main>
+      <h1><%= t('app_title') %></h1>
+      <h2>Give time and take a seat!</h2>
+      <h3> <a href="/cities"> Explore Chairities around you</a></h3>
+    </main>
+    <div class="row">
+      <section>
+        <div class="col-md-6">
+          <i class="fa fa-users fa-8x"></i>
+          <h3>Volunteers</h3>
+          <ul class="list-unstyled">
+            <li>Discover meaningful ways to give by selecting the cause(s) important to you</li>
+            <li>Select your community to find local opportunities</li>
+            <li>Volunteer virtually</li>
+            <li>Reach out to organiztions and opportunities that match your passion & volunteer today!</li>
+          </ul>        
+        </div>
+        <div class="col-md-6">
+          <i class="fa fa-building-o fa-8x"></i>
+          <h3>Charities</h3>
+          <ul class="list-unstyled">
+            <li>List your Charity for free</li>
+            <li>Attract passion-driven volunteers</li>
+            <li>Update your Charity's profile as needed</li>
+            <li>Attract donors</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <% @category.each do |category| %>
+          <%= content_tag(:div, content_tag(:p, category.name), class: 'btn btn-primary listing') %>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="col-md-4">
-    <% @category.each do |category| %>
-      <%= content_tag(:div, content_tag(:p, category.name), class: 'btn btn-primary') %>
-    <% end %>
-  </div>
-    <div class="col-md-4">
-  </div>
-</center>
-</div>
-
-</div>
 </center>

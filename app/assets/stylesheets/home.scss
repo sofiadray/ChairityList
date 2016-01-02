@@ -1,0 +1,12 @@
+.clearfix:after {
+  content: ' ';
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  display:block;
+  clear: both;
+}
+
+.listing {
+  float: left;
+}

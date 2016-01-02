@@ -43,7 +43,7 @@ html {
 .footer a {
   text-decoration: none;
 
-  &:hover {
+  &:hover, &:visited {
     color: #777;
   }
 }
@@ -54,6 +54,10 @@ a {
 
 a:visited {
   color: purple;
+}
+
+.fa-8x {
+  font-size: 8em;
 }
 
 h1 {
