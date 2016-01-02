@@ -6,34 +6,41 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-category = Category.create([
-  { name: 'Advocacy & Human Rights' },
-  { name: 'Animals' },
-  { name: 'Arts & Culture' },
-  { name: 'Board Development' },
-  { name: 'Children & Youth' },
-  { name: 'Community' },
-  { name: 'Computers & Technology' },
-  { name: 'Crisis Support' },
-  { name: 'Disaster Relief' },
-  { name: 'Education & Literacy' },
-  { name: 'Emergency & Safety' },
-  { name: 'Employment' },
-  { name: 'Environment' },
-  { name: 'Faith-Based' },
-  { name: 'Health & Medicine' },
-  { name: 'Homeless & Housing' },
-  { name: 'Hunger' },
-  { name: 'Migrants & Refugees' },
-  { name: 'International' },
-  { name: 'Justice & Legal' },
-  { name: 'LGBT' },
-  { name: 'Media & Broadcasting' },
-  { name: 'People with Disabilities' },
-  { name: 'Politics' },
-  { name: 'Race & Ethnicity' },
-  { name: 'Seniors' },
-  { name: 'Sports & Recreation' },
-  { name: 'Veterans & Military Families' },
-  { name: 'Women'}
-])
+#make the categories
+
+# category = Category.create([
+#   { name: 'Advocacy & Human Rights' },
+#   { name: 'Animals' },
+#   { name: 'Arts & Culture' },
+#   { name: 'Board Development' },
+#   { name: 'Children & Youth' },
+#   { name: 'Community' },
+#   { name: 'Computers & Technology' },
+#   { name: 'Crisis Support' },
+#   { name: 'Disaster Relief' },
+#   { name: 'Education & Literacy' },
+#   { name: 'Emergency & Safety' },
+#   { name: 'Employment' },
+#   { name: 'Environment' },
+#   { name: 'Faith-Based' },
+#   { name: 'Health & Medicine' },
+#   { name: 'Homeless & Housing' },
+#   { name: 'Hunger' },
+#   { name: 'Migrants & Refugees' },
+#   { name: 'International' },
+#   { name: 'Justice & Legal' },
+#   { name: 'LGBT' },
+#   { name: 'Media & Broadcasting' },
+#   { name: 'People with Disabilities' },
+#   { name: 'Politics' },
+#   { name: 'Race & Ethnicity' },
+#   { name: 'Seniors' },
+#   { name: 'Sports & Recreation' },
+#   { name: 'Veterans & Military Families' },
+#   { name: 'Women'}
+# ])
+
+# make one charity
+# city = City.create(name: "New York City", state: "New York", country: "United States", continent: "North America")
+# charity = Charity.create(name: "my charity", category_id: 6)
+# pairing = CharityCity.create(charity_id: 1, city_id: 1)
