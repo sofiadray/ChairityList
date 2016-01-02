@@ -1,12 +1,15 @@
+<center>
 <div class="container">
-  <h1><%= t('welcome') %></h1>
+  <h1><%= t('app_title') %></h1>
+  <h3> <a href="/cities"> Explore Chairities around you </a> <br> or <br> Login </h3>
   <div class="row">
-    <div class="col-md-12">
-      <main class="clearfix">
+    <center>
+      <div class="col-md-8 col-md-offset-2">
         <% @category.each do |category| %>
           <%= content_tag(:div, content_tag(:p, category.name), class: 'btn btn-primary listing') %>
         <% end %>
-      </main>
-    </div>
+      </div>
+    </center>
   </div>
 </div>
+</center>
