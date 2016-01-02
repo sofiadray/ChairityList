@@ -22,6 +22,9 @@
 en:
   hello: "Hello world"
   welcome: "Welcome to ChairityList"
+  about_us_header: "More About Us"
+  contact_header: "Contact Us"
+  faq_header: "Frequently Asked Questions"
   helpers:
     submit:
       user:
