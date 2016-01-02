@@ -1,0 +1,6 @@
+
+<% @charities.each do |charity| %>
+<%= charity.posts.last.updated_at %> - 
+<%= link_to '#{charity.posts.last.title}', charity_post_path(@post.id) %> posted by 
+<%= link_to "#{charity.name}", charity_path %> <br>
+<% end %>
