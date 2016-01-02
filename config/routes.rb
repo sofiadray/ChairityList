@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get "/cities" => 'city#index'
 
+  recourses :cities 
+  
   resources :charities do
   	resources :posts
   end
