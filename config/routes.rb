@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   get '/faq' => 'static#faq'
   get '/contact' => 'static#contact'
 
-  get "/cities" => 'city#index'
-
   resources :cities
 
   resources :charities do
