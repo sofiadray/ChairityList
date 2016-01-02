@@ -1,16 +1,27 @@
 <div class = "col-md-3">
+<center>
 	<h2>charityList</h2>
+
+	
+	<%= link_to "add a volunteer listing", new_post_path %><br>
+
+	<%= link_to "add a charity", new_charity_path %><br>
+
+	find volunteer opportunities<br>
+	
+	find volunteers<br>
+
+	search<br>
+
+</center>
 </div>
 
-<div class="row">
-	<div class = "col-md-8" id = "header">
+<div class = "col-md-8" id = "header">
 		<h2> <%= @city.name.downcase %> </h2>
-	</div>
-
-	<div class = "col-md-3">
-	</div>
-
-	<div class = "col-md-9">
+</div>
+<div class = "col-md-3">
+</div>
+<div class = "col-md-8">
 	<% @categories.each do |category|%>
 
 		<div class = "col-md-2" >
@@ -25,8 +36,5 @@
 		</div>
 
 	<% end %>
-	</div>
-
 </div>
 
-</div>

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :categories
 
+  resources :posts 
+  
   resources :charities do
   	resources :posts
   end
