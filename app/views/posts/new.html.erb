@@ -1,8 +1,8 @@
 <h2>Post a Listing</h1>
 
 <%= simple_form_for @post do |form| %>
-
 <%= form.input :title %><br>
+<%= form.input :type, as: :radio_buttons %>
 <%= form.input :content %><br>
 <%= form.association :charity, label_method: :name %>
 <%= form.submit "Create Listing" %>

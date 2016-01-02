@@ -1,10 +1,11 @@
-<h2>Add A New Charity</h1>
-
+<div class = "cold-md-4">
+<h2>Add A New Charity</h2>
 <%= simple_form_for @charity do |form| %>
 <%= form.input :name %><br>
 <%= form.input :image %><br>
 <%= form.input :website %><br>
-<%= form.input :real? %><br>
+<%= form.input :real?, as: :boolean, checked_value: true, unchecked_value: false%><br>
 <%= form.association :category, label_method: :name %>
 <%= form.submit "Add new charity" %>
 <% end %>
+</div>
