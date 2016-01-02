@@ -1,0 +1,4 @@
+<h1>Charity Results</h1>
+ <% @charities.each do |x| %>
+   <p><%= link_to x.name, charity_path(x.id) %></p>
+ <% end %>
