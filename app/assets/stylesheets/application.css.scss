@@ -43,7 +43,7 @@ html {
 .footer a {
   text-decoration: none;
 
-  &:hover {
+  &:hover, &:visited {
     color: #777;
   }
 }
