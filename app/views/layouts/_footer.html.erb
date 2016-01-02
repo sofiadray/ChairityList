@@ -4,13 +4,13 @@
       <p class="text-muted">&copy; <%= Time.now.year %> ChairityList.</p>
     </div>
     <div class="col-xs-3">
-      <p class="text-muted">Footer Col 2</p>
+      <%= link_to 'About Us', about_path, class: 'text-muted' %>
     </div>
     <div class="col-xs-3">
-      <p class="text-muted">Footer Col 3</p>
+      <%= link_to 'FAQs', faq_path, class: 'text-muted' %>
     </div>
     <div class="col-xs-3">
-      <p class="text-muted">Footer Col 4</p>
+      <%= link_to 'Contact Us', contact_path, class: 'text-muted' %>
     </div>
   </div>
 </footer>
