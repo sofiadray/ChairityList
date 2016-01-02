@@ -8,7 +8,13 @@
 
 <p>URL: <a href="<%= @charity.website %>" target=blank><%= @charity.website %></a></p>
 
-<p>Status: <%= @charity.real? %></p>
+<p>Status: 
+	<%= if @charity.real? == "true" %>
+		<%= puts "This is a real charity." %>
+	<%= else %>
+		<%= puts "This is an idea for a charity." %>
+	<% end %>
+</p>
 
 <p>Category: <%= @charity.category %></p>
 
