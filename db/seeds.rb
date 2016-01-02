@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 city = City.create(name: "New York City", state: "New York", country: "United States", continent: "North America")
+charity = Charity.create(name: "my charity", category_id: 6)
+pairing = CharityCity.create(charity_id: 1, city_id: 1)
 
 # category = Category.create([
 #   { name: 'Advocacy & Human Rights' },

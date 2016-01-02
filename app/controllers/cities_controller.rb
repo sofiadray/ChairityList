@@ -4,7 +4,12 @@ class CitiesController < ApplicationController
 	end
 
 	def show
-		# @city = City.find(params:id)
+		@categories = Category.all
+		@city = City.find(params[:id])
+
+		@ids = CharityCity.where(city_id: @city.id)
+		
+		@charities = Charity.where(id: @ids)
 	end
 
 
