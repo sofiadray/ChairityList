@@ -1,11 +1,20 @@
+<center>
 <div class="container">
-  <h1>Welcome to Chairity List</h1>
+  <h1>chairityList</h1>
+  <h3> <a href="/cities"> Explore Chairities around you </a> <br> or <br> Login </h3>
 <div class="row">
+<center>
+  <div class="col-md-4">
+  </div>
   <div class="col-md-4">
     <% @category.each do |category| %>
       <%= content_tag(:div, content_tag(:p, category.name), class: 'btn btn-primary') %>
     <% end %>
   </div>
+    <div class="col-md-4">
+  </div>
+</center>
 </div>
 
 </div>
+</center>

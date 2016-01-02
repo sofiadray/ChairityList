@@ -3,4 +3,10 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
+  get "/cities" => 'city#index'
+
+  resources :charities do
+  	resources :posts
+  end
+
 end
