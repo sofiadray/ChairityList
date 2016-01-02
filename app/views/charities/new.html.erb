@@ -1,0 +1,10 @@
+<h2>Add A New Charity</h1>
+
+<%= simple_form_for @charity do |form| %>
+<%= form.input :name %><br>
+<%= form.input :image %><br>
+<%= form.input :website %><br>
+<%= form.input :real? %><br>
+<%= form.association :category, label_method: :name %>
+<%= form.submit "Add new charity" %>
+<% end %>
