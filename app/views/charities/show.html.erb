@@ -4,7 +4,7 @@
 
 <%= link_to "Delete this charity", {action: :destroy, id: @charity.id}, method: :delete %>
 
-<%= image_tag @charity.filename, width: 300 %>
+<%= image_tag @charity.image, width: 300 %>
 
 <p>URL: <a href="<%= @charity.website %>" target=blank><%= @charity.website %></a></p>
 
