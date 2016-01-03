@@ -1,10 +1,12 @@
-<h2><%= @category.name %> Charity Listings</h2>
-
-<% @charities.each do |charity| %>
-<%= charity.posts.last.updated_at %> - 
-<%= link_to '#{charity.posts.last.title}', charity_post_path(@post.id) %> posted by 
-<%= link_to "#{charity.name}", charity_path %> <br>
-<% end %>
-
-<%= link_to "+ new listing", new_post_path %> <br>
-<%= link_to "+ new charity", new_charity_path %>
+<div class="container">
+  <h2><%= @category.name %> Charity Listings</h2>
+  
+    <% @charities.each do |charity| %>
+      <%= charity.posts.last.updated_at %> - 
+      <%= link_to charity.posts.last.title, charity_post_path(@post.id) %> posted by 
+      <%= link_to charity.name, charity_path %> <br>
+    <% end %>
+  
+    <%= link_to t('.new_post_link'), new_post_path %> <br>
+    <%= link_to t('.new_charity_link'), new_charity_path %>
+</div>
