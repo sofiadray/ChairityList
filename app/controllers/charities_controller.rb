@@ -1,5 +1,10 @@
 class CharitiesController < ApplicationController
 	def index
+		  if params[:search]
+		    @charities = Charity.search(params[:search]).order("created_at DESC")
+		  else
+		    @charities = Charity.all.order('created_at DESC')
+		  end
 	end
 
 	def show
@@ -15,7 +20,7 @@ class CharitiesController < ApplicationController
 
 		if @charity.save
 			flash[:message] = "Here is your Chairity's page!"
-			redirect_to charity_path(params[:id])
+			redirect_to charity_path(@charity.id)
 		else
 			render :new
 		end
@@ -34,10 +39,11 @@ class CharitiesController < ApplicationController
 	def destroy
 	end
 
+
 private
 
 	def charity_params
-		require(:charity).permit!
+		params.require(:charity).permit(:name, :image, :website, :real?, :category_id)
 	end
 
 

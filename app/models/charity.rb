@@ -4,4 +4,8 @@ class Charity < ActiveRecord::Base
 
   has_many :charity_cities
   has_many :cities, :through => :charity_city
+
+  def self.search(search)
+    where("name like ?", "%#{search}%") 
+  end
 end
