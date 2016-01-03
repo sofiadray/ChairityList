@@ -24,6 +24,15 @@ en:
   app_title: "ChairityList"
   about_us_header: "More About Us"
   contact_header: "Contact Us"
+  edit_charity_text: "Edit this charity"
+  delete_charity_text: "Delete this charity"
+  url_text: "URL:"
+  status_heading: "Status:"
+  category_heading: "Category:"
+  volunteer: "Volunteer"
+  volunteer_link: "Current Volunteer Opportunities"
+  donations: "Donations"
+  donation_link_text: "To learn about donating to our case, please visit our website for more information"
   faq_header: "Frequently Asked Questions"
   helpers:
     submit:
