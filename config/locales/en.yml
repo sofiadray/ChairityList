@@ -48,6 +48,8 @@ en:
   charities:
     charities:
       search_failure: "Your search returned no results. Please try again."
+    new:
+      add_charity_header: "Add a New Charity"
     show:
       edit_charity_text: "Edit this charity"
       delete_charity_text: "Delete this charity"
