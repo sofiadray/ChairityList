@@ -1,3 +1,4 @@
+<% flash[:message] %>
 <h2><%= @charity.name %></h2>
 
 <%= link_to "Edit this charity", edit_charity_path(@charity.id) %>
@@ -16,7 +17,9 @@
 	<% end %>
 </p>
 
+<% if  @charity.category %>
 <p>Category: <%= @charity.category.name %></p>
+<% end %>
 
 <hr>
 
