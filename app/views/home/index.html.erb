@@ -32,7 +32,8 @@
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <% @category.each do |category| %>
-          <%= content_tag(:div, content_tag(:p, category.name), class: 'btn btn-primary listing') %>
+          <%= link_to "#{category.name}", category_path(category.id) %>
+           <!--  <%= content_tag(:div, content_tag(:p, category.name), class: 'btn btn-primary listing') %> -->
         <% end %>
       </div>
     </div>
