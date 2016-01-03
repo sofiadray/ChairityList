@@ -1,9 +1,12 @@
 class PostsController < ApplicationController
 
 	def index
+		@charity = Charity.find(params[:charity_id])
+		@posts = @charity.posts.all
 	end
 
 	def show
+		@charity = Charity.find(params[:charity_id])
 		@post = Post.find(params[:id])
 	end
 
