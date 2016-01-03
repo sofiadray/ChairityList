@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151230004437) do
+ActiveRecord::Schema.define(version: 20160102231209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,18 @@ ActiveRecord::Schema.define(version: 20151230004437) do
     t.string   "name"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string  "title"
+    t.string  "image"
+    t.text    "content"
+    t.integer "user_id"
+    t.integer "charity_id"
+    t.string  "type"
+  end
+
+  add_index "posts", ["charity_id"], name: "index_posts_on_charity_id", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.float    "latitude"
@@ -77,4 +89,6 @@ ActiveRecord::Schema.define(version: 20151230004437) do
   add_foreign_key "charities", "categories"
   add_foreign_key "charity_cities", "charities"
   add_foreign_key "charity_cities", "cities"
+  add_foreign_key "posts", "charities"
+  add_foreign_key "posts", "users"
 end

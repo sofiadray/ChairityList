@@ -76,13 +76,18 @@ h4 {
   font-family: "times new roman";
 }
 
-
 h5 {
-  background-color: #D3D3D3;
+  background-color: #EBEBEB;
   padding: 8px;
 }
 
-#header {
-  background-color: #D3D3D3 ;
-  margin: 12px;
+h6 {
+  text-decoration: underline;
+  text-decoration-color: #EBEBEB;
 }
+
+#header {
+  background-color: #EBEBEB;
+  margin: 6px;
+}
+

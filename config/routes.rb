@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   resources :cities
 
+  resources :categories
+
+  resources :posts 
+  
   resources :charities do
   	resources :posts
   end
