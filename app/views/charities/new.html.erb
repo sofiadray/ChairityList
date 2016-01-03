@@ -1,5 +1,8 @@
 <div class = "col-md-4">
+
 <center>
+
+
 <h2>Add A New Charity</h2>
 <%= simple_form_for @charity do |form| %>
 <%= form.input :name %>
@@ -9,5 +12,8 @@
 <%= form.association :category, label_method: :name %>
 <%= form.submit "Add new charity" %>
 <% end %>
+
 </center>
 </div>
+
+
