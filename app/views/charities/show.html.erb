@@ -3,7 +3,7 @@
 <div class="row">
   <h2><%= @charity.name %></h2>
 
-  <%= link_to t('.edit_charity_text'), edit_charity_path(@charity.id) %>%>&nbsp;
+  <%= link_to t('.edit_charity_text'), edit_charity_path(@charity.id) %>&nbsp;
 
   <%= link_to t('.delete_charity_text'), {action: :destroy, id: @charity.id}, method: :delete %>&nbsp;
 
