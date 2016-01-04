@@ -1,7 +1,7 @@
 <div class = "col-md-4">
 <h2>Edit a Listing</h2>
 
-<%= simple_form_for @post do |form| %>
+<%= simple_form_for [@charity, @post] do |form| %>
 <%= form.input :title %>
 <%= form.input :type %>
 <%= form.input :content %>

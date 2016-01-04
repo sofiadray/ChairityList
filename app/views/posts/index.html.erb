@@ -4,8 +4,11 @@
 
 <%= link_to "Return to charity detail page", charity_path(@charity.id) %>
 
-<% @posts.each do |post| %>
-	<%= post.title %><br>
+<hr>
+
+<% @post.each do |post| %>
+	<%= link_to post.title, charity_post_path(@charity, post) %><br>
 	<%= post.type %><br>
 	<%= post.content %><br>
+	<hr>
 <% end %>
