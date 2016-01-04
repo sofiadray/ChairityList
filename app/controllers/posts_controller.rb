@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
 		if @post.save
 			flash[:message] = "Listing created"
-			redirect_to post_path(params[:id])
+			redirect_to post_path(@post.id)
 		else
 			render :new
 		end
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 private
 
 	def post_params
-		require(:post).permit(:title, :content, :charity_id, :user_id)
+		params.require(:post).permit(:title, :content, :charity_id, :user_id)
 	end
 
 
