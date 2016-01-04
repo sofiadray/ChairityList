@@ -1,46 +1,38 @@
-<div class = "col-md-2" class="header">
-<center>
-	<h2>charityList</h2>
+<div class="container">
+	<div class="col-md-3">
+		<aside class="header">
+			<center>
+			<h2><%= t('.app_title') %></h2>
 
-	
-	<%= link_to "add a volunteer listing", new_post_path %><br>
+			<%= link_to t('.add_volunteer_listing'), new_post_path %><br>
+			<%= link_to t('.add_charity_listinig'), new_charity_path %><br>
+			<%= link_to t('.find_volunteer_link'), '#' %><br>
+			<%= link_to t('.look_for_volunteers'), '#' %><br>
+			<%= render 'layouts/search' %>
 
-	<%= link_to "add a charity", new_charity_path %><br>
+			</center>
+		</aside>
+	</div>
 
-	find volunteer opportunities<br>
-	
-	find volunteers<br>
-
-	search<br>
-
-</center>
-</div>
-
-<div class = "col-md-8" class="header">
-		<h2> <%= @city.name.downcase %> </h2>
-</div>
-
-
-<div class = "col-md-3">
-</div>
-<div class = "col-md-8">
-	<% @categories.each do |category|%>
-
-		<div class = "col-md-3" >
-			<h5> <%= link_to category.name, category_path(category.id) %> </h5>
-				<h6> volunteer opportunities <br>
-				 available volunteers <br>
-				 charity ideas <br>
-				 community efforts <br>
-				 </h6>
-					<% @charities.each do |charity| %>
+	<div class="col-md-9">
+		<div class="container-fluid">
+			<header class="header">
+				<h2> <%= @city.name.downcase %> </h2>
+			</header>
+			<% @categories.each do |category|%>
+			<div class="col-md-3" >
+				<h5><%= link_to category.name, category_path(category.id) %> </h5>
+				<h6><%= t('.volunteer_link').downcase %></h6>
+			 	<h6>available volunteers</h6>
+			 	<h6><%= t('.charity_ideas').downcase %></h6>
+			 	<h6><%= t('.community_efforts').downcase %></h6>
+				<% @charities.each do |charity| %>
 					<% if charity.category_id == category.id %>
-						<h6> <%= link_to charity.name, charity_path(charity.id) %> </h6>
+						<h6>+++<%= link_to charity.name, charity_path(charity.id), class: 'charity' %></h6>
+					<% end %>
 				<% end %>
+			</div>
 			<% end %>
-
 		</div>
-
-	<% end %>
+	</div>
 </div>
-

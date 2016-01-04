@@ -21,12 +21,84 @@
 
 en:
   hello: "Hello world"
-  app_title: "ChairityList"
+
+  home:
+    index:
+      app_title: "ChairityList"
+      slogan: "Give time and take a seat!"
+      explore_text: "Explore charities around you"
+      volunteer: "Volunteer"
+      volunteer_reasons:  !html |
+                          <li>Discover meaningful ways to give by selecting the cause(s) important to you</li>
+                          <li>Select your community to find local opportunities</li>
+                          <li>Volunteer virtually</li>
+                          <li>Reach out to organiztions and opportunities that match your passion & volunteer today!</li>
+      charity: "Charity"
+      charity_reasons:  !html |
+                        <li>List your Charity for free</li>
+                        <li>Attract passion driven volunteers</li>
+                        <li>Update your Charity&quot;s profile as needed</li>
+                        <li>Attract donors</li>
+
+  categories:
+    show:
+      new_post_link: "+ new listing"
+      new_charity_link: "+ new charity"
+
+  charities:
+    charities:
+      search_failure: "Your search returned no results. Please try again."
+    new:
+      add_charity_header: "Add a New Charity"
+    show:
+      edit_charity_text: "Edit this charity"
+      delete_charity_text: "Delete this charity"
+      url_text: "URL:"
+      status_heading: "Status:"
+      category_heading: "Category:"
+      volunteer_link: "Volunteer Opportunities"
+      donations: "Donations"
+      donation_link_text: "To learn about donating to our cause, please visit our website for more information"
+
+  cities:
+    index:
+      city_header: "Find a Charity by City"
+    show:
+      app_title: "ChairityList"
+      add_volunteer_listing: "add a volunteer listing"
+      add_charity_listing: "add a charity"
+      find_volunteer_link: "find volunteer opportunities"
+      look_for_volunteers: "find volunteers????(should replace?)"
+      search: "search"
+      volunteer_link: "Volunteer Opportunities"
+      charity_ideas: "Charity Ideas"
+      community_efforts: "Community Efforts"
+
+  posts:
+    new:
+      post_header: "Post a Listing"
+
   about_us_header: "More About Us"
   contact_header: "Contact Us"
   faq_header: "Frequently Asked Questions"
+  
   helpers:
     submit:
       user:
         create: "Onward"
         update: "Change It"
+      charity:
+        create: "Add new charity"
+      post:
+        create: "Create Listing"
+
+  layouts:
+    navigation:
+      app_title: "ChairityList"
+      add_charity: "Add a Charity"
+      sign_up: "Sign Up"
+      manage_listing: "Manage Listings"
+    footer:
+      about: "About Us"
+      faq: "FAQs"
+      contact: "Contact Us"
