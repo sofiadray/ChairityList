@@ -1,8 +1,8 @@
 <h1>Charity Results</h1>
-  <% if @charities.count != 0 %>
+  <% if @charities.present? %>
     <% @charities.each do |x| %>
       <p><%= link_to x.name, charity_path(x.id) %></p>
     <% end %>
   <% else %>
-    <p>Your search has no results</p>
+    <p><%= t('.search_failure') %></p>
  <% end %>

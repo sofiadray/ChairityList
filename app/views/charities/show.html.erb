@@ -1,35 +1,30 @@
+<div class="container">
 <% flash[:message] %>
-<h2><%= @charity.name %></h2>
-
-<%= link_to "Edit this charity", edit_charity_path(@charity.id) %>
-
-<%= link_to "Delete this charity", {action: :destroy, id: @charity.id}, method: :delete %>
-
-<%= image_tag @charity.image, width: 300 %>
-
-<p>URL: <a href="<%= @charity.website %>" target=blank><%= @charity.website %></a></p>
-
-<p>Status: 
-	<% if @charity.real? == true %>
-		<%= "This is a real charity." %>
-	<% else %>
-		<%= "This is an idea for a charity." %>
-	<% end %>
-</p>
-
-<% if  @charity.category %>
-<p>Category: <%= @charity.category.name %></p>
-<% end %>
-
-<hr>
-
-<h3>Volunteer</h3>
-
-<%= link_to "Current Volunteer Opportunities", charity_posts_path(@charity.id) %>
-
-<hr>
-
-<h3>Donations</h3>
-
-<p>To learn about donating to our cause, please visit us <a href= "<%= @charity.website %>" target=blank>here</a> for more information.</p>
-
+<div class="row">
+  <h2><%= @charity.name %></h2>
+  <%= link_to t('.edit_charity_text'), edit_charity_path(@charity.id) %>&nbsp;
+  <%= link_to t('.delete_charity_text'), {action: :destroy, id: @charity.id}, method: :delete %>&nbsp;
+  <%= image_tag @charity.image, width: 300 %>
+  <p><%= t('.url_text') %> <%= link_to @charity.website, @charity.website, target: "_blank" %></p>
+  <p><%= t('.status_heading') %> 
+    <% if @charity.real? == true %>
+      <%= "This is a real charity." %>
+    <% else %>
+      <%= "This is an idea for a charity." %>
+    <% end %>
+  </p>
+  <% if  @charity.category %>
+  <p><%= t('.category_heading') %> <%= @charity.category.name %></p>
+  <% end %>
+  <hr>
+</div>
+<div class="row">
+  <h3><%= t('.volunteer') %></h3>
+  <%= link_to t('.volunteer_link'), charity_posts_path(@charity.id) %>
+  <hr>
+</div>
+<div class="row">
+  <h3><%= t('.donations') %></h3>
+  <%= link_to t('.donation_link_text'), @charity.website, target: "_blank" %>
+</div>
+</div>
