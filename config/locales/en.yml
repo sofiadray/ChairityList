@@ -53,6 +53,7 @@ en:
     show:
       edit_charity_text: "Edit this charity"
       delete_charity_text: "Delete this charity"
+      about: "About "
       url_text: "URL:"
       overview: "Mission Statement:"
       status_heading: "Status:"
