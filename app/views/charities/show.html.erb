@@ -7,9 +7,13 @@
 
   <%= link_to t('.delete_charity_text'), {action: :destroy, id: @charity.id}, method: :delete %>&nbsp;
 
-  <%= image_tag @charity.image, width: 300 %>
+  <hr>
+
+  <%= image_tag @charity.image, width: 100 %>
 
   <p><%= t('.url_text') %> <%= link_to @charity.website, @charity.website, target: "_blank" %></p>
+
+  <p><%= t('.overview') %> <%= @charity.overview %></p>
 
   <p><%= t('.status_heading') %> 
   	<% if @charity.real? == true %>

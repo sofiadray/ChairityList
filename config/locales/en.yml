@@ -54,6 +54,7 @@ en:
       edit_charity_text: "Edit this charity"
       delete_charity_text: "Delete this charity"
       url_text: "URL:"
+      overview: "Mission Statement:"
       status_heading: "Status:"
       category_heading: "Category:"
       volunteer_link: "Volunteer Opportunities"

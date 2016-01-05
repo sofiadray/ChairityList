@@ -3,10 +3,11 @@
 <h2>Edit Details for <%= @charity.name %></h1>
 
 <%= simple_form_for @charity do |form| %>
-<%= form.input :name %><br>
-<%= form.input :image %><br>
-<%= form.input :website %><br>
-<%= form.input :real? %><br>
+<%= form.input :name %>
+<%= form.input :image %>
+<%= form.input :website %>
+<%= form.input :overview %>
+<%= form.input :real? %>
 <%= form.association :category, label_method: :name %>
 <%= form.submit "Update Charity Details" %>
 <% end %>

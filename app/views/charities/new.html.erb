@@ -6,6 +6,7 @@
       <%= form.input :name %>
       <%= form.input :image %>
       <%= form.input :website %>
+      <%= form.input :overview %>
       <%= form.input :real?, as: :boolean, checked_value: true, unchecked_value: false %>
       <%= form.association :category, label_method: :name %>
       <%= form.submit class: 'btn btn-default' %>
