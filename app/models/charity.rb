@@ -6,6 +6,6 @@ class Charity < ActiveRecord::Base
   has_many :cities, :through => :charity_city
 
   def self.search(search)
-    where("name like ?", "%#{search}%") 
+    where("name ilike ?", "%#{search}%") 
   end
 end
