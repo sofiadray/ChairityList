@@ -1,10 +1,9 @@
 <div class = "col-md-4">
 <h2>Post a Listing</h2>
 
-
 <%= simple_form_for @post do |form| %>
 <%= form.input :title %>
-<%= form.input :type %>
+<%= form.input :type, :as => :check_boxes, :input_html => { :value => "to volunteer" } %>
 <%= form.input :content %>
 <%= form.association :charity, label_method: :name %>
 <%= form.submit "Create Listing" %>
