@@ -55,7 +55,10 @@ en:
       delete_charity_text: "Delete this charity"
       url_text: "URL:"
       status_heading: "Status:"
-      category_heading: "Category:"
+      real_deal: "The owner of this listing has indicated this is a real charity. Please note it is your responsibility to verify this assertion"
+      charitable_idea: "This is an idea for a charity."
+
+      category_heading: "Category: %{cat}"
       volunteer_link: "Volunteer Opportunities"
       donations: "Donations"
       donation_link_text: "To learn about donating to our cause, please visit our website for more information"
