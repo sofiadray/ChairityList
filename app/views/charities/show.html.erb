@@ -18,9 +18,9 @@
   <p><%= t('.overview') %> <%= @charity.overview %></p>
 
   <p><%= t('.status_heading') %> 
-  	<% if @charity.real? == true %>
+  	<% if @charity.real == true %>
   		<%= "This is a real charity." %>
-  	<% else %>
+  	<% elsif @charity.real == false %>
   		<%= "This is an idea for a charity." %>
   	<% end %>
   </p>
