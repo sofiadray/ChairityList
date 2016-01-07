@@ -1,6 +1,23 @@
-<div class = "containter">
-<h3> on: <%= @post.updated_at.month%> / <%= @post.updated_at.day %>  - 
- <%= @post.title %> </h3> <br>
-<h4><%= @post.content %></h4>
-<h4> for: <%= @post.charity.name %></h4>
+
+<div class = "container">
+	<h3> on: <%= @post.updated_at.month%> / <%= @post.updated_at.day %>  - 
+ 		<%= @post.title %> </h3> <br>
+		<h4><%= @post.content %></h4>
+		<h4> for: <%= @post.charity.name %></h4>
 </div>
+
+<h2><%= @post.title %></h2>
+<h3><%= @charity.name %></h3>
+
+<hr>
+
+<%= link_to "Edit this post", edit_charity_post_path(@charity, @post.id) %><br>
+
+<%= link_to "Delete this post", {action: :destroy, id: @post.id}, method: :delete %>
+
+<hr>
+
+<p>Type: <%= @post.type %></p>
+
+<p>Description: <%= @post.content %></p>
+
