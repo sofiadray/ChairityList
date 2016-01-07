@@ -1,17 +1,17 @@
 class PostsController < ApplicationController
 
 	def index
-		@charity = Charity.find(params[:charity_id])
+		@charity = Charity.find(params[:id])
 		@post = @charity.posts.all
 	end
 
 	def new
-		@charity = Charity.find(params[:charity_id])
+		@charity = Charity.find(params[:id])
 		@post = @charity.posts.new
 	end
 
 	def create
-		@charity = Charity.find(params[:charity_id])
+		@charity = Charity.find(params[:id])
 		@post = @charity.posts.new(post_params)
 
 		if @post.save
