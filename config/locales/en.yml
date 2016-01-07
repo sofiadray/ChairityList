@@ -53,7 +53,9 @@ en:
     show:
       edit_charity_text: "Edit this charity"
       delete_charity_text: "Delete this charity"
+      about: "About "
       url_text: "URL:"
+      overview: "Mission Statement:"
       status_heading: "Status:"
       real_deal: "The owner of this listing has indicated this is a real charity. Please note it is your responsibility to verify this assertion"
       charitable_idea: "This is an idea for a charity."

@@ -1,0 +1,13 @@
+<div class = "col-md-4">
+<h2>Edit Details for <%= @charity.name %></h1>
+
+<%= simple_form_for @charity do |form| %>
+<%= form.input :name %>
+<%= form.input :image %>
+<%= form.input :website %>
+<%= form.input :overview %>
+<%= form.input :real, :label => "Charity status:", as: :radio_buttons, :collection => [['This is a real charity.', true], ['This is an idea for a charity.', false]] %>
+<%= form.association :category, label_method: :name %>
+<%= form.submit "Update Charity Details" %>
+<% end %>
+</div>

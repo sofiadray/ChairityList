@@ -33,17 +33,31 @@ class CharitiesController < ApplicationController
 
 	def update
 		@charity = Charity.find(params[:id])
-		@charity.update_attributes
+		@charity.update_attributes(charity_params)
+
+		if @charity.update_attributes(charity_params)
+			redirect_to charity_path(@charity.id)
+		else
+			render :new
+		end
 	end
 
 	def destroy
+		@charity = Charity.find(params[:charity_id])
+		@charity.destroy
+
+		if @charity.destroy
+			redirect_to charities_path
+		else
+			render :new
+		end
 	end
 
 
 private
 
 	def charity_params
-		params.require(:charity).permit(:name, :image, :website, :real?, :category_id)
+		params.require(:charity).permit(:name, :image, :website, :overview, :real, :category_id)
 	end
 
 
