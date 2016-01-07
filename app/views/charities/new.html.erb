@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-<div class = "col-md-4">
 
-<center>
-
-
-<h2>Add A New Charity</h2>
-<%= simple_form_for @charity do |form| %>
-<%= form.input :name %>
-<%= form.input :image %>
-<%= form.input :website %>
-<%= form.input :real?, as: :check_boxes, checked_value: true, unchecked_value: false %>
-<%= form.association :category, label_method: :name %>
-<%= form.submit "Add new charity" %>
-<% end %>
-
-</center>
-</div>
-
-
-=======
 <div class="container">
   <div class = "col-md-4">
 
@@ -34,4 +14,3 @@
 
   </div>
 </div>
->>>>>>> 4cdcec18c55e41dadfc46983ec3eb1bc7c52b7b9
