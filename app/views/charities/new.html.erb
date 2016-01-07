@@ -7,7 +7,8 @@
       <%= form.input :name %>
       <%= form.input :image %>
       <%= form.input :website %>
-      <%= form.input :real?, as: :boolean, checked_value: true, unchecked_value: false %>
+      <%= form.input :overview %>
+      <%= form.input :real, :label => "Charity status:", as: :radio_buttons, :collection => [['This is a real charity.', true], ['This is an idea for a charity.', false]] %>
       <%= form.association :category, label_method: :name %>
       <%= form.submit class: 'btn btn-default' %>
     <% end %>
