@@ -21,20 +21,20 @@
 
 en:
   hello: "Hello world"
+  app_title: "ChairityList"
 
   home:
     index:
-      app_title: "ChairityList"
       slogan: "Give time and take a seat!"
       explore_text: "Explore charities around you"
       volunteer: "Volunteer"
-      volunteer_reasons:  !html |
+      volunteer_reasons_html:
                           <li>Discover meaningful ways to give by selecting the cause(s) important to you</li>
                           <li>Select your community to find local opportunities</li>
                           <li>Volunteer virtually</li>
-                          <li>Reach out to organiztions and opportunities that match your passion & volunteer today!</li>
+                          <li>Reach out to organizations and opportunities that match your passion & volunteer today!</li>
       charity: "Charity"
-      charity_reasons:  !html |
+      charity_reasons_html: 
                         <li>List your Charity for free</li>
                         <li>Attract passion driven volunteers</li>
                         <li>Update your Charity&quot;s profile as needed</li>
@@ -57,7 +57,10 @@ en:
       url_text: "URL:"
       overview: "Mission Statement:"
       status_heading: "Status:"
-      category_heading: "Category:"
+      real_deal: "The owner of this listing has indicated this is a real charity. Please note it is your responsibility to verify this assertion"
+      charitable_idea: "This is an idea for a charity."
+
+      category_heading: "Category: %{cat}"
       volunteer_link: "Volunteer Opportunities"
       donations: "Donations"
       donation_link_text: "To learn about donating to our cause, please visit our website for more information"
@@ -66,7 +69,6 @@ en:
     index:
       city_header: "Find a Charity by City"
     show:
-      app_title: "ChairityList"
       add_volunteer_listing: "add a volunteer listing"
       add_charity_listing: "add a charity"
       find_volunteer_link: "find volunteer opportunities"
@@ -96,7 +98,6 @@ en:
 
   layouts:
     navigation:
-      app_title: "ChairityList"
       add_charity: "Add a Charity"
       sign_up: "Sign Up"
       manage_listing: "Manage Listings"
