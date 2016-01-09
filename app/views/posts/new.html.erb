@@ -5,7 +5,7 @@
 
     <%= simple_form_for [@charity, @post], { wrapper_html: { class: 'form-control' } } do |form| %>
       <%= form.input :title %>
-      <%= form.input :type %>
+      <%= form.input :commitment, label: "Time commitment", :collection => ['Single commitment', 'Weekly', 'Monthly', 'Short term', "Long term"], :selected => 1 %>
       <%= form.input :content %>
       <%= form.association :charity, label_method: :name %>
       <%= form.submit class: 'btn btn-default' %>

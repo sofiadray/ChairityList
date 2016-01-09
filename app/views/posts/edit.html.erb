@@ -1,10 +1,10 @@
 <div class = "col-md-4">
 <center>
-<h2>Edit a Listing</h2>
+<h2><%= t('.post_edit')%></h2>
 
 <%= simple_form_for [@charity, @post] do |form| %>
 <%= form.input :title %>
-<%= form.input :type %>
+<%= form.input :commitment, label: "Time commitment", :collection => ['Single commitment', 'Weekly', 'Monthly', 'Short term', "Long term"], :selected => 1 %>
 <%= form.input :content %>
 <%= form.association :charity, label_method: :name %>
 <%= form.submit "Edit Listing" %>

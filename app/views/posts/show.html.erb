@@ -3,12 +3,14 @@
 
 <hr>
 
-<%= link_to "Edit this post", edit_charity_post_path(@charity, @post.id) %><br>
+<%= link_to t('.post_edit_this'), edit_charity_post_path(@charity, @post.id) %><br>
 
-<%= link_to "Delete this post", {action: :destroy, id: @post.id}, method: :delete %>
+<%= link_to t('.post_delete'), {action: :destroy, id: @post.id}, method: :delete %><br>
+
+<%= link_to t('.post_return'), charity_posts_path(@charity, @post.id) %>
 
 <hr>
 
-<p>Type: <%= @post.type %></p>
+<p><%= t('.post_time') %><%= @post.commitment %></p>
 
-<p>Description: <%= @post.content %></p>
+<p><%= t('.post_description') %><%= @post.content %></p>
