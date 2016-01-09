@@ -4,9 +4,9 @@
       <h2><%= t('.post_header') %></h2>
       <%= simple_form_for [@charity, @post], { wrapper_html: { class: 'form-control' } } do |form| %>
         <%= form.input :title %>
-        <%= form.input :commitment, label: "Time commitment", :collection => ['Single commitment', 'Weekly', 'Monthly', 'Short term', "Long term"], :selected => 1 %>
+        <%= form.input :commitment, label: "Time commitment", :collection => ['Once', 'Weekly', 'Monthly', 'Short term', "Long term"] %>
         <%= form.input :content %>
-        <%= form.association :charity, label_method: :name %>
+        <%= form.input :contact, label: "Contact (email address or URL to apply)" %>
         <%= form.submit class: 'btn btn-default' %>
       <% end %>
     </div>

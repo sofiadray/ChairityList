@@ -5,11 +5,12 @@
 		<h3><%= @charity.name %></h3>
 		<hr>
 		<%= link_to t('.post_edit_this'), edit_charity_post_path(@charity, @post.id) %><br>
-		<%= link_to t('.post_delete'), {action: :destroy, id: @post.id}, method: :delete %><br>
+		<%= link_to t('.post_delete'), {action: :destroy, id: @post.id}, method: :delete, data: {confirm: "Are you sure?"} %><br>
 		<%= link_to t('.post_return'), charity_posts_path(@charity, @post.id) %>
 		<hr>
 		<p><%= t('.post_time') %><%= @post.commitment %></p>
 		<p><%= t('.post_description') %><%= @post.content %></p>
+		<p><%= t('.post_contact') %><%= @post.contact %></p>
 		</div>
 	</div>
 </div>

@@ -5,7 +5,7 @@
 
     <%= link_to t('.edit_charity_text'), edit_charity_path(@charity.id) %>&nbsp;
 
-    <%= link_to t('.delete_charity_text'), {action: :destroy, id: @charity.id}, method: :delete %>&nbsp;
+    <%= link_to t('.delete_charity_text'), {action: :destroy, id: @charity.id}, method: :delete, data: {confirm: "Are you sure?"}  %>&nbsp;
 
     <hr>
 

@@ -92,6 +92,7 @@ en:
       post_return: "Return to charity posts"
       post_time: "Time commitment: "
       post_description: "Description: "
+      post_contact: "To apply: "
 
   about_us_header: "More About Us"
   contact_header: "Contact Us"
