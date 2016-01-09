@@ -10,8 +10,17 @@
       <%= form.input :overview %>
       <%= form.input :real, :label => "Charity status:", as: :radio_buttons, :collection => [['This is a real charity.', true], ['This is an idea for a charity.', false]] %>
       <%= form.association :category, label_method: :name %>
+
+      <%= form.association :charity_city do |f| %>
+        <%= f.input :city_id, collection: City.all  %>
+        <%= f.hidden_field :charity_id, value: @charity.id  %>
+       <% end %> 
+
       <%= form.submit class: 'btn btn-default' %>
-    <% end %>
+    <% end %> 
+
+
+
 
   </div>
 </div>

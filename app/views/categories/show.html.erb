@@ -3,10 +3,12 @@
 
 
 	<% @charities.each do |charity| %>
-	<% if charity.categeory_id = @category.id %>
-	<%= charity.posts.last.updated_at %> - 
-	<%= link_to charity.posts.last.title, charity_post_path(@post.id) %> posted by 
-	<%= link_to charity.name, charity_path %> <br>
+		<% if charity.category_id == @category.id %>
+			<%= charity.posts.each do |p| %>
+		<%= p.updated_at %> - 
+		<%= link_to p.title, charity_post_path(p.id) %> posted by 
+			<%= link_to charity.name, charity_path %> <br>
+		<% end %>
 	<% end %>
 	<% end %>
     <%= link_to t('.new_charity_link'), new_charity_path %>
