@@ -1,8 +1,14 @@
 <h1>Charity Results</h1>
-  <% if @charities.present? %>
-    <% @charities.each do |x| %>
-      <p><%= link_to x.name, charity_path(x.id) %></p>
+  <% @charities.each do |charity| %>
+    <%= content_tag(:h2, (link_to charity.name, charity_path(charity.id))) %>
+      Posts: <%= link_to charity.posts.count, charity_posts_path(charity.id) %>
+    <%= content_tag(:p, charity.overview) %>
+
+    <h3>Posts by <%= charity.name %></h3>
+
+    <% charity.posts.each do |post| %>
+      <%= content_tag(:h3, post.title) %>
+      <%= content_tag(:blockquote, post.content) %>
     <% end %>
-  <% else %>
-    <p><%= t('.search_failure') %></p>
- <% end %>
+     <hr>
+  <% end %>
