@@ -22,6 +22,8 @@
 en:
   hello: "Hello world"
   app_title: "ChairityList"
+  search_results: "Search Results"
+  post_heading: "Posts: "
 
   home:
     index:
@@ -48,6 +50,7 @@ en:
   charities:
     charities:
       search_failure: "Your search returned no results. Please try again."
+      posts_by: "Posts by %{char}"
     new:
       add_charity_header: "Add a New Charity"
     show:
