@@ -9,6 +9,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'cancancan', '~> 1.10'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
