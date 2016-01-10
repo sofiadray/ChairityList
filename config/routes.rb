@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/about' => 'static#about'
   get '/faq' => 'static#faq'
   get '/contact' => 'static#contact'
+  get '/search' => 'search#search'
 
   resources :cities
 

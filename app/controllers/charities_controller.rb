@@ -1,9 +1,5 @@
 class CharitiesController < ApplicationController
 	def index
-		@search = Charity.search do
-			fulltext params[:search]
-		end
-		@charities = @search.results
 	end
 
 	def show
