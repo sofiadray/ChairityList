@@ -1,8 +1,8 @@
 <center>
   <div class="container">
     <main>
-      <h1><%= t('.app_title') %></h1>
-      <h3><%= t('.slogan') %></h3>
+      <h1>HumanityList</h1>
+
       
     </main>
     
@@ -11,9 +11,9 @@
         <div class="col-md-6">
 
           <i class="fa fa-users fa-4x"></i>
-          <h3><%= link_to t('.explore_text'), cities_path %></h3>
-          <h3><%= t('.volunteer').pluralize %></h3>
-
+         
+          <h3>For <%= t('.volunteer').pluralize %></h3>
+        <h3><%= link_to t('.explore_text'), cities_path %></h3>
           <ul class="list-unstyled">
             <%= raw t('.volunteer_reasons') %>
           </ul>        
@@ -21,9 +21,10 @@
         <div class="col-md-6">
 
           <i class="fa fa-building-o fa-4x"></i>
-          <h3><%= link_to "Register your charity today", new_charity_path %></h3>
-          <h3><%= t('.charity').pluralize %></h3>
-
+         
+          <h3>For <%= t('.charity').pluralize %></h3>
+          
+ <h3><%= link_to "Register your charity today", new_user_session_path %></h3>
           <ul class="list-unstyled">
             <li>List your Charity for free</li>
             <li>Attract passion-driven volunteers</li>

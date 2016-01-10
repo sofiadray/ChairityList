@@ -8,7 +8,8 @@ class CharitiesController < ApplicationController
 	end
 
 	def show
-		@charity = Charity.find(params[:id])
+		@user = User.find(current_user.id)
+		@charity = @user.charities.find(params[:id])
 	end
 
 	def new
@@ -19,7 +20,7 @@ class CharitiesController < ApplicationController
 		@charity = Charity.new(charity_params)
 
 		if @charity.save
-			flash[:message] = "Here is your Chairity's page!"
+			flash[:message] = "Here is your charity's page!"
 			redirect_to charity_path(@charity.id)
 		else
 			render :new

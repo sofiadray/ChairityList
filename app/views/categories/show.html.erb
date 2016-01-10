@@ -1,7 +1,6 @@
 <div class="container">
 	<h2><%= @category.name %> Charity Listings</h2>
 
-
 	<% @charities.each do |charity| %>
 		<% if charity.category_id == @category.id %>
 			<%= charity.posts.each do |p| %>

@@ -29,16 +29,17 @@ en:
       explore_text: "Explore charities around you"
       volunteer: "Volunteer"
       volunteer_reasons:  !html |
-                          <li>Discover meaningful ways to give by selecting the cause(s) important to you</li>
-                          <li>Select your community to find local opportunities</li>
                           <li>Volunteer virtually</li>
-                          <li>Reach out to organiztions and opportunities that match your passion & volunteer today!</li>
+                          <li>Discover meaningful ways to give to cause(s) important to you</li>
+                          <li>Select your community to find local opportunities</li>
+                          <li>Reach out to organizations that match your passion & volunteer today!</li>
       charity: "Charity"
       charity_reasons:  !html |
+                        <li>Attract donors</li>
                         <li>List your Charity for free</li>
                         <li>Attract passion driven volunteers</li>
                         <li>Update your Charity&quot;s profile as needed</li>
-                        <li>Attract donors</li>
+                        
 
   categories:
     show:

@@ -4,8 +4,8 @@
 		<aside class="header">
 			<center>
 			<h2><%= t('.app_title') %></h2>
-			<%= link_to t('.add_volunteer_listing'), new_post_path %><br>
-			<%= link_to t('.add_charity_listing'), new_charity_path %><br>
+			<%= link_to t('.add_volunteer_listing'), "#" %><br>
+			<%= link_to t('.add_charity_listing'), "#" %><br>
 			<%= link_to t('.find_volunteer_link'), '#' %><br>
 			<%= render 'layouts/search' %>
 			</center>
@@ -24,14 +24,14 @@
 							<% @charities.each do |charity| %>
 								<% if charity.category_id == category.id %>
 									<h6>+++<%= link_to charity.name, charity_path(charity.id), class: 'charity' %></h6>
-
 								<% end %>
-							<% if Charity.where(category_id: @category.id).count == 0 %>
-							No Charities yet
-							<% end %>
+
+								<% if Charity.where(category_id: category.id).count == 0 %>
+									<h6> No Charities yet </h6>
+								<% end %>
 							<% end %>
 					</div>
-					<% end %>
+			<% end %>
 		</div>
 	</div>
 </div>
