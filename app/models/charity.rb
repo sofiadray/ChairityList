@@ -4,6 +4,7 @@ class Charity < ActiveRecord::Base
 
   has_many :charity_cities
   has_many :cities, :through => :charity_city
+  after_touch :index
 
   searchable do
     text :name
