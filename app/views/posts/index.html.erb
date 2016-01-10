@@ -1,3 +1,4 @@
+<div class="container">
 <h2>Volunteer Opportunities for <%= @charity.name %></h2>
 
 <%= link_to "Add a new volunteer listing", new_charity_post_path(@charity.id) %><br>
@@ -7,8 +8,8 @@
 <hr>
 
 <% @post.each do |post| %>
-	<%= link_to post.title, charity_post_path(@charity, post) %><br>
-	<%= post.type %><br>
-	<%= post.content %><br>
-	<hr>
-<% end %>
+  <%= link_to post.title, charity_post_path(@charity, post) %><br>
+  <%= post.type %><br>
+  <%= post.content %><br>
+  <hr>
+<% end %></div>
