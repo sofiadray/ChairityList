@@ -1,10 +1,9 @@
 class CharitiesController < ApplicationController
 	def index
-		  if params[:search]
-		    @charities = Charity.search(params[:search]).order("created_at DESC")
-		  else
-		    @charities = Charity.all.order('created_at DESC')
-		  end
+		@search = Charity.search do
+			fulltext params[:search]
+		end
+		@charities = @search.results
 	end
 
 	def show
