@@ -3,10 +3,8 @@
 		<aside class="header">
 			<center>
 			<h2><%= t('app_title') %></h2>
-			<%= link_to t('.add_volunteer_listing'), new_post_path %><br>
-			<%= link_to t('.add_charity_listinig'), new_charity_path %><br>
-			<%= link_to t('.find_volunteer_link'), '#' %><br>
-			<%= link_to t('.look_for_volunteers'), '#' %><br>
+<!-- 			<%= link_to t('.add_volunteer_listing'), new_post_path %><br>
+ -->			<%= link_to t('.add_charity_listinig'), new_charity_path %><br>
 			<%= render 'layouts/search' %>
 			</center>
 		</aside>
@@ -17,18 +15,18 @@
 				<h2> <%= @city.name.downcase %> </h2>
 			</header>
 			<% @categories.each do |category|%>
-			<div class="col-md-3" >
-				<h5><%= link_to category.name, category_path(category.id) %> </h5>
-				<h6><%= t('.volunteer_link').downcase %></h6>
-			 	<h6>available volunteers</h6>
-			 	<h6><%= t('.charity_ideas').downcase %></h6>
-			 	<h6><%= t('.community_efforts').downcase %></h6>
-				<% @charities.each do |charity| %>
-					<% if charity.category_id == category.id %>
-						<h6>+++<%= link_to charity.name, charity_path(charity.id), class: 'charity' %></h6>
-					<% end %>
-				<% end %>
-			</div>
+				<div class="col-md-3" >
+					<h5><%= link_to category.name, category_path(category.id) %> </h5>
+						<% @charities.each do |charity| %>
+							<% if charity.category_id == category.id %>
+								<h4>+++<%= link_to charity.name, charity_path(charity.id), class: 'charity' %></h6>
+							<% end %>
+						<% end %>
+					<hr>
+					<h6><%= t('.volunteer_link').downcase %></h6>
+				 	<h6><%= t('.charity_ideas').downcase %></h6>
+				 	<h6><%= t('.community_efforts').downcase %></h6>
+				</div>
 			<% end %>
 		</div>
 	</div>
