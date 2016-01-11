@@ -24,6 +24,10 @@ en:
   app_title: "ChairityList"
   search_results: "Search Results"
   post_heading: "Posts: "
+  about_us_header: "More About Us"
+  contact_header: "Contact Us"
+  faq_header: "Frequently Asked Questions"
+  posts_by: "Posts by %{name}"
 
   home:
     index:
@@ -50,7 +54,6 @@ en:
   charities:
     charities:
       search_failure: "Your search returned no results. Please try again."
-      posts_by: "Posts by %{char}"
     new:
       add_charity_header: "Add a New Charity"
     show:
@@ -84,11 +87,6 @@ en:
   posts:
     new:
       post_header: "Post a Listing"
-
-  about_us_header: "More About Us"
-  contact_header: "Contact Us"
-  faq_header: "Frequently Asked Questions"
-  
   helpers:
     submit:
       user:
