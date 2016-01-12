@@ -1,14 +1,16 @@
-<h2>Volunteer Opportunities for <%= @charity.name %></h2>
-
-<%= link_to "Add a new volunteer listing", new_charity_post_path(@charity.id) %><br>
-
-<%= link_to "Return to charity detail page", charity_path(@charity.id) %>
-
-<hr>
-
-<% @post.each do |post| %>
-	<%= link_to post.title, charity_post_path(@charity, post) %><br>
-	<%= post.type %><br>
-	<%= post.content %><br>
-	<hr>
-<% end %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Volunteer Opportunities for <%= @charity.name %></h2>
+			<%= link_to t('.post_add'), new_charity_post_path(@charity.id) %><br>
+			<%= link_to t('.post_return'), charity_path(@charity.id) %>
+			<hr>
+			<% @post.each do |post| %>
+				<%= link_to post.title, charity_post_path(@charity, post) %><br>
+				<%= t('.post_commitment') %><%= post.commitment %><br>
+				<%= truncate(post.content, :length => 100, :omission => t('.post_continue')) %><br>
+				<hr>
+			<% end %>
+		</div>
+	</div>
+</div>

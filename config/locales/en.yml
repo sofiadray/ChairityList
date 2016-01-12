@@ -81,6 +81,20 @@ en:
   posts:
     new:
       post_header: "Post a Listing"
+    edit:
+      post_edit: "Edit a Listing"
+    index:
+      post_commitment: "Time commitment: "
+      post_add: "Add a new volunteer listing"
+      post_return: "Return to charity detail page"
+      post_continue: "... (continued)"
+    show:
+      post_edit_this: "Edit this post"
+      post_delete: "Delete this post"
+      post_return: "Return to charity posts"
+      post_time: "Time commitment: "
+      post_description: "Description: "
+      post_contact: "To apply: "
 
   about_us_header: "More About Us"
   contact_header: "Contact Us"
