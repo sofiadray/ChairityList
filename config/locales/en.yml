@@ -22,6 +22,15 @@
 en:
   hello: "Hello world"
   app_title: "ChairityList"
+  search_results: "Search Results"
+  post_heading: "Posts: "
+  about_us_header: "More About Us"
+  contact_header: "Contact Us"
+  faq_header: "Frequently Asked Questions"
+  posts_by: "Posts by %{name}"
+  about_us_header: "More About Us"
+  contact_header: "Contact Us"
+  faq_header: "Frequently Asked Questions"
 
   home:
     index:
@@ -96,10 +105,7 @@ en:
       post_description: "Description: "
       post_contact: "To apply: "
 
-  about_us_header: "More About Us"
-  contact_header: "Contact Us"
-  faq_header: "Frequently Asked Questions"
-  
+
   helpers:
     submit:
       user:

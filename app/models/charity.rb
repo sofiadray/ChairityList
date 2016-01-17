@@ -4,8 +4,17 @@ class Charity < ActiveRecord::Base
 
   has_many :charity_cities
   has_many :cities, :through => :charity_city
+  after_touch :index
 
-  def self.search(search)
-    where("name ilike ?", "%#{search}%") 
+  searchable do
+    text :name
+    text :overview
+    text :content do
+      posts.map(&:content)
+    end
+    text :title do
+      posts.map(&:title)
+    end
   end
+  
 end

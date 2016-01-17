@@ -1,0 +1,16 @@
+<div class="container">
+  <%= content_tag(:h1, t('search_results')) %>
+    <% @charities.each do |charity| %>
+       <hr class="results">
+      <%= content_tag(:h2, (link_to charity.name, charity_path(charity.id))) %>
+      <%= t('post_heading') %> <%= link_to charity.posts.count, charity_posts_path(charity.id) %>
+      <%= content_tag(:p, charity.overview) %>
+        <div class="col-md-11 col-md-offset-1">
+            <%= content_tag(:h2, (t 'posts_by', name: charity.name)) %>
+              <% charity.posts.each do |post| %>
+                <%= content_tag(:h3, post.title) %>
+                <%= content_tag(:blockquote, post.content) %>
+              <% end %>
+        </div>
+  <% end %>
+</div>

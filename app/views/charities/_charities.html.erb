@@ -1,8 +1,0 @@
-<h1>Charity Results</h1>
-  <% if @charities.present? %>
-    <% @charities.each do |x| %>
-      <p><%= link_to x.name, charity_path(x.id) %></p>
-    <% end %>
-  <% else %>
-    <p><%= t('.search_failure') %></p>
- <% end %>
