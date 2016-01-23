@@ -4,7 +4,7 @@ class Charity < ActiveRecord::Base
 
   has_many :posts, dependent: :destroy
 
-  has_many :charity_cities
+  has_many :charity_cities, dependent: :destroy
   has_many :cities, :through => :charity_city
   accepts_nested_attributes_for :charity_cities
 

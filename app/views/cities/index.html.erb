@@ -1,8 +1,10 @@
 <div class="container">
 <main>
   <h1><%= t('.city_header') %></h1>
+  
   <% @cities.each do |c| %>
-  <%= link_to c.name, city_path(c.id) %>
-  <% end %>
+  	 <%= c.state %> <br>
+ <p class="tab"><%= link_to c.name, city_path(c.id) %></p><br> 
+ <% end %>
 </main>
 </div>
